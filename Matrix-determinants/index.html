@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Kidney transplantation - surgical aspects">
+<meta name="keywords" content="kidney, transplantation, operation, urology, vein, artery, bladder, ureter">
+<meta name="author" content="Denitsa Galabova">
+<title>Матрици и детерминанти</title>
+</head>
+<body style="background-color:#ff9f80">
+<h1 style="text-align:center">Матрици и детерминанти</h1>
+<div>
+<h2>1. Дефиниция</h2>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+Матрицата представлява правоъгълна таблица от елементи, като най-чсто са числа - числова матрица. Елементите на матрицата могат да бъдат от произволно <a href="field.html" style="text-decoration:none;" target="_blank">поле</a> (реални или рационални числа) или <a href="ring.html" style="text-decoration:none;" target="_blank">пръстен</a>. Матрица от тип <i>mxn</i> над поле <i>F</i> се нарича матрица, елементите на която са от полето <i>F</i> и има <i>m</i> реда и <i>n</i> стълба.   
+</p>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+Например: <br /><br /><br />
+<img src="matrix.svg">
+</p>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+Множеството от матриците над поле <i>F</i> от тип <i>mxn</i> може да се запише по следния начин - <i>F<sub>mxn</sub></i>. Обикновено матриците се отбелязват с главни латински букви - например <i>A</i>, а елементите на матрицата се записват със съответната малка или главна буква - <i>a<sub>ij</sub></i> или <i>A<sub>ij</sub></i>, като първият индекс показва номера на реда, а вторият - номера на стълба, на който се намира елементът в матрицата.
+</p>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+Две матрици са равни, когато са от един и същи тип и съответните им елементи са равни.
+</p>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+Матрицата е квадратна (от ред <i>n</i>), когато има равен брой редове и стълбове (<i>n</i> на брой).
+</p>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+В една квадратна матрица от ред <i>n</i>, елементите с равни индекси <i>(a<sub>ii</sub>, i=1..n)</i> образуват главния ѝ диагонал - <i>a<sub>ii</sub>, i=1..n</i>
+</p>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+Елементите, сборът от индексите на които е равен на <i>n+1 (a<sub>ij</sub>, i=1..n, j=n..1)</i>, образуват страничния диагонал - <i>a<sub>1n</sub>, a<sub>2n-1</sub>,...,a<sub>n1</sub></i>.
+</p>
+</div>
+<div>
+<h2>2. Видове матрици</h2>
+<ul style="font-size: 14pt; font-family: Monotype Corsiva; ">
+<li><b>триъгълна матрица</b> - квадратна матрица, при която елементите под или над главния диагонал са нули, съответна <i>горна</i> или <i>долна</i> триъгълна матрица:</li>
+<img src="triange_matrix.svg" style="display: block; margin-left: auto; margin-right: auto; width: 10%;"><br />
+<li><b>диагонална матрица</b> - квадратна матрица, чиито елементи, които не участват в главния диагонал са нули:</li>
+<img src="diagonal_matrix.svg" style="display: block; margin-left: auto; margin-right: auto; width: 20%;"><br />
+<li><b>скаларна матрица</b> - диагонална матрица, при която елементите от главния диагонал са равни:</li>
+<img src="scalar_matrix.svg" style="display: block; margin-left: auto; margin-right: auto; width: 10%;"><br />
+<li><b>единична матрица</b> - скаларна матрица, при която елементите от главния диагонал са равни на единица:</li>
+<img src="single_matrix.svg" style="display: block; margin-left: auto; margin-right: auto; width: 10%;"><br />
+<li><b>симетрична матрица</b> - квадратна матрица, за която е изпълнена <i>a<sub>ij</sub> = a<sub>ji</sub>, &#8704; i,j</i></li>
+<img src="symetric_matrix.svg" style="display: block; margin-left: auto; margin-right: auto; width: 10%;"><br />
+<li><b>антисиметрична матрица</b> - квадратна матрица <i>A(a<sub>ij</sub>)</i>, за която е изпълнена <i>a<sub>ij</sub> = -a<sub>ji</sub></i>, за всяко <i>i,j</i>.</li>
+<img src="antisymetric_matrix.svg" style="display: block; margin-left: auto; margin-right: auto; width: 10%;"><br />
+</ul>
+</div>
+<div>
+<h2>3. Оснивни операции с матриците</h2>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+Основните операции с матриците са: транспониране, събиране, умножение на матрица с число и умножение на матрици.
+</p>
+<ul style="font-size: 14pt; font-family: Monotype Corsiva; ">
+<li>Транспониране на матрица (унарна операция - операция с един операнд) - при тази операция се извършват следните действия: обръщане на матрицата <i><b>A</b></i> по главния ѝ диагонал; записване на редовете на <i><b>A</b></i> като стълбове на <i><b>A<sup>T</sup></b></i>; записване на стълбовете на <i><b>A</b></i> като редове на <i><b>A<sup>T</sup></b></i>. То се записва последния начин:</li>
+<img src="transposing_matrix.svg" style="display: block; margin-left: auto; margin-right: auto; width: 30%;"><br />
+<li>Събират се матрици от един и същи тип. Елементите на новата матрица (сбора), са равни на сбора на съответните елементи от събираните матрици:</li>
+<img src="addition_matrix.svg" style="display: block; margin-left: auto; margin-right: auto; width: 30%;"><br />
+<li>Умножение на матрица с число - всеки елемент на матрицата се умножава с дадено число :</li>
+<img src="multiplication_matrix_number.svg" style="display: block; margin-left: auto; margin-right: auto; width: 20%;"><br />
+<li>Умножение на матриците <i>A</i> и <i>B</i> е дефинирано само когато <i>A</i> е съгласувана с <i>B</i>, т.е. когато броят на стълбовете на <i>A</i> е равен на броя на редовете на <i>B</i>. Произведението <i>C<sub>m x n</sub></i> на <i>A<sub>m x n</sub></i> и <i>B<sub>m x n</sub></i> се дефинира с равенството:
+<img src="multiplication_matrix-equation.svg" style="display: block; margin-left: auto; margin-right: auto; width: 30%;"><br />
+т.е. всеки ред на матрицата <i>A</i> се умножава последователно с всеки от стълбовете на <i>B</i>, като всяко от тези произведения дава един елемент от реда на матрицата <i>C</i> с номер, съвпадащ с този на <i>A</i>. Първият ред на <i>A</i>, умножен с всички стълбове на <i>B</i>, дава всички елементи от първия ред на <i>C</i> и т.н.
+</li>
+<p>
+Пример: <br />
+<img src="multiplication_matrix.svg" style="display: block; margin-left: auto; margin-right: auto; width: 40%;"><br />
+</p>
+</ul>
+</div>
+<div>
+<h2>4. Детерминанти.</h2>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+Детерминатите на квадратни матрици от 1 на 1 до 3 на 3 са следните:
+</p>
+<img src="determinant-1x1.svg" style="display: block; margin-left: auto; margin-right: auto; width: 10%;"><br />
+<img src="determinant-2x2.svg" style="display: block; margin-left: auto; margin-right: auto; width: 20%;"><br />
+<img src="determinant-3x3.svg" style="display: block; margin-left: auto; margin-right: auto; width: 30%;"><br />
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+В останалите случаи, най-често матрицата се свежда до горна или долна триъгълна форма чрез елемнетарни преобразувания (умножение на ред или стълб с дадено число, прибавяне на реда към друг ред (или прибавяне на стълб към друг стълб)).
+<img src="determinant-nxn.svg" style="display: block; margin-left: auto; margin-right: auto; width: 30%;"><br />
+</p>
+</div>
+<div>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+Ако искате да имате повече информация за мен, натиснете <a href="forme.html" style="text-decoration: none;">тук</a>.
+</p>
+<p style="font-size: 16pt; font-family: New Times Roman; text-indent: 30px; text-align: justify; ">
+За контакт с мен, натиснете следния <a href="contact.html" style="text-decoration: none;">линк</a>.
+</p>
+</div>
+</body>
+</html>
